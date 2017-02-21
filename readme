@@ -1,0 +1,7 @@
+example illustrating hardware pwm from the STM32F401RE mcu
+
+gpio pin A0 is used as the output pin, this corresponds to analog 0 on the nucleo f401re board
+
+only outside dependency is the chip header file, stm32f4xx.h which provides names for the various registers on the stm32. no hardware abstraction library or driver is used, however the STM32Cube library is required to include the device header. *set the path to stm32cube in the makefile, as STM32_ROOT
+
+`make` will compile an elf binary and convert it to hex file for for flashing
