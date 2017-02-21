@@ -1,5 +1,5 @@
 #  Project Name
-PROJECT=hello_world
+PROJECT=pwmtest
 
 #  Type of CPU/MCU in target hardware
 CPU=cortex-m4
@@ -19,22 +19,6 @@ HSE_VALUE=8000000
 OBJECTS		=  main.o
 OBJECTS		+= system.o
 OBJECTS		+= startup_stm32f401xe.o
-
-# stm32cube hal library code
-
-# OBJECTS += stm32f4xx_hal.o
-# OBJECTS += stm32f4xx_hal_adc.o
-# OBJECTS += stm32f4xx_hal_adc_ex.o
-# OBJECTS += stm32f4xx_hal_cortex.o
-# OBJECTS += stm32f4xx_hal_dma.o
-# OBJECTS += stm32f4xx_hal_dma_ex.o
-# OBJECTS += stm32f4xx_hal_flash.o
-# OBJECTS += stm32f4xx_hal_flash_ex.o
-# OBJECTS += stm32f4xx_hal_gpio.o
-# OBJECTS += stm32f4xx_hal_rcc.o
-# OBJECTS += stm32f4xx_hal_rcc_ex.o
-# OBJECTS += stm32f4xx_hal_spi.o
-
 	      
 #  Select the toolchain by providing a path to the top level
 #  directory; this will be the folder that holds the
@@ -63,15 +47,6 @@ INCDIRS = "-I$(STM32_ROOT)/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 INCDIRS += "-I$(STM32_ROOT)/Drivers/CMSIS/Include"
 INCDIRS += "-I$(STM32_ROOT)/Drivers/BSP/STM32F4xx-Nucleo"
 INCDIRS += "-I."
-
-# INCDIRS += "-I$(STM32_ROOT)/Drivers/STM32F4xx_HAL_Driver/Inc"
-
-
-#  All possible source directories other than '.' must be defined in
-#  the VPATH variable.  This lets make tell the compiler where to find
-#  source files outside of the working directory.  If you need more
-#  than one directory, separate them with ':'.
-# VPATH = $(STM32_ROOT)/Drivers/STM32F4xx_HAL_Driver/Src
 
 # Name and path to the linker script
 LSCRIPT = STM32F401CE_FLASH.ld
